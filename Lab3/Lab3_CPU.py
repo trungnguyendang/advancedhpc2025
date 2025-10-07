@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import time
 
-img = plt.imread("Lab3_image.jpg")
+img = plt.imread("../Image.jpg")
 
 arr = np.array(img)
 h, w, _ = img.shape
@@ -17,7 +17,7 @@ end = time.time()
 
 print("CPU execute time:", end - start, "seconds")
 gray_img = gray_loop.reshape(h, w)
-plt.imsave("grayscale.jpg", gray_img, cmap="gray")
+plt.imsave("CPU_grayscale.jpg", gray_img, cmap="gray")
 
 imgplot = plt.imshow(gray_img,cmap="gray")
 plt.axis("off")
