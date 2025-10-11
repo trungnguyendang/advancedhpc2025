@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import math, time
-from numba import cuda, float32
-from Lab4.Lab4_GPU import grayscale_kernel  # assume same interface
+from numba import cuda
+from Lab4.Lab4_GPU import grayscale_kernel
 
 def create_gaussian_kernel(size, sigma):
     k = np.zeros((size, size), dtype=np.float32)
